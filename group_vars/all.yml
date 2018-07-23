@@ -1,0 +1,25 @@
+unix_groups:
+  - { name: "group_a", gid: 2100, state: "present"}
+  - { name: "group_b", gid: 2200, state: "present"}
+  - { name: "group_c", gid: 2300, state: "present"}
+
+unix_users:
+  - {
+      name: "user_a",
+      uid: 2101,
+      group: "group_a",
+      state: "present",
+      comment: "User A",
+      password: "$6$y5VBQDCMs8GA/pFI$JOi8.juzyx1tnRSsrE8.XqRwAIStS43x2ee4xwoykOBms2PK2jIiN3d0nJ88jzQ0neF13ScJSl.65PhXKRuGh1",
+      public_keys: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrerP9K+YkYW2+yxL2f2kYqbNnrVZhFmmAlAIS1ba5KPY5wPZYoo7pDmpKTRd7lkBaBsi3Nv+dfyj4ptZDwP8KrvIOyfE+46g27b/TrQdNRlOV6HOJp9GnoZarPpC6E4P2V7tePRssDdS1xhFNCDnguemTKZsZyCOEi9JJ+hfSoraTRrklwxmwW0oKY/3+1mjnVuUu6J114IPq5zUVkcjFeKDUUhusLkP8/osMRVL5oFT+odXI9G8lSWmssCWx8tjRLk4ii34YoC9L3lXHZQC7i+aEg8gDr1XWKO4nbtvWlFS6DATAepMDdD+xVQRtGjlw4QdfQ5AZb4XRfFc+v7xP foo@l4a-provisioning.localdomain"
+    }
+
+  - {
+      name: "user_b",
+      uid: 2201,
+      group: "group_b",
+      state: "present",
+      comment: "User B",
+      password: "$6$y5VBQDCMs8GA/pFI$JOi8.juzyx1tnRSsrE8.XqRwAIStS43x2ee4xwoykOBms2PK2jIiN3d0nJ88jzQ0neF13ScJSl.65PhXKRuGh1",
+      public_keys: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrerP9K+YkYW2+yxL2f2kYqbNnrVZhFmmAlAIS1ba5KPY5wPZYoo7pDmpKTRd7lkBaBsi3Nv+dfyj4ptZDwP8KrvIOyfE+46g27b/TrQdNRlOV6HOJp9GnoZarPpC6E4P2V7tePRssDdS1xhFNCDnguemTKZsZyCOEi9JJ+hfSoraTRrklwxmwW0oKY/3+1mjnVuUu6J114IPq5zUVkcjFeKDUUhusLkP8/osMRVL5oFT+odXI9G8lSWmssCWx8tjRLk4ii34YoC9L3lXHZQC7i+aEg8gDr1XWKO4nbtvWlFS6DATAepMDdD+xVQRtGjlw4QdfQ5AZb4XRfFc+v7xP foo@l4a-provisioning.localdomain"
+    }
