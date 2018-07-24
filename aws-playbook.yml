@@ -1,0 +1,12 @@
+- hosts: l4a-web
+  become: yes
+  become_user: root
+  tasks:
+  roles:
+    - hostname
+    - unix_groups
+    - unix_users
+    - httpd
+    - {role: sudoers/allow_all, group_name: group_a}
+    - {role: sudoers/allow_httpd, group_name: group_b}
+    - cron/yum_autoupdate
